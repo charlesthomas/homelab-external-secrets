@@ -16,7 +16,16 @@ resources:
 - resources/secrets.yaml
 - resources/services.yaml
 patches:
-  - patches/reloader.yaml
+- patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: all
+      namespace: external-secrets
+      annotations:
+        reloader.stakater.com/auto: "true"
+  target:
+    kind: Deployment
 helmCharts:
 - name: external-secrets
   includeCRDs: true
