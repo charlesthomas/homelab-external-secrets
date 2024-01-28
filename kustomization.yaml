@@ -9,6 +9,7 @@ commonLabels:
   app: external-secrets
 
 resources:
+- resources/cluster-secret-stores.yaml
 - resources/deployments.yaml
 - resources/namespaces.yaml
 - resources/network-policies.yaml
