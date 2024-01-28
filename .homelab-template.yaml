@@ -17,6 +17,7 @@ pvc: false
 resources:
 - configmaps.yaml
 - deployments.yaml
+- secrets.yaml
 - services.yaml
 service: false
 serviceAccount: false
