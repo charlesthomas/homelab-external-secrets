@@ -9,7 +9,6 @@ commonLabels:
   app: external-secrets
 
 resources:
-- resources/configmaps.yaml
 - resources/deployments.yaml
 - resources/namespaces.yaml
 - resources/network-policies.yaml
