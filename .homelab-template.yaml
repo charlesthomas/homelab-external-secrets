@@ -1,0 +1,24 @@
+_commit: v1.1.2-12-g458fbf9
+_src_path: /Users/crthomas/code/charlesthomas/homelab-template
+additionalResources: network-policies.yaml
+backups: false
+helm: true
+helmCrds: true
+helmName: external-secrets
+helmRelease: external-secrets
+helmRepo: https://charts.external-secrets.io
+helmValues: ''
+helmVersion: ''
+ingress: false
+labels: 'app: external-secrets'
+name: external-secrets
+namespace: external-secrets
+pvc: false
+resources:
+- configmaps.yaml
+- deployments.yaml
+- services.yaml
+service: false
+serviceAccount: false
+upstreamURL: https://external-secrets.io/
+url: https://github.com/charlesthomas/homelab-external-secrets

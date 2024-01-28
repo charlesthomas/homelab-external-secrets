@@ -1,0 +1,23 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: external-secrets
+
+commonAnnotations:
+  repo: https://github.com/charlesthomas/homelab-external-secrets
+commonLabels:
+  app: external-secrets
+
+resources:
+- resources/configmaps.yaml
+- resources/deployments.yaml
+- resources/namespaces.yaml
+- resources/network-policies.yaml
+- resources/services.yaml
+patches:
+  - patches/reloader.yaml
+helmCharts:
+- name: external-secrets
+  includeCRDs: true
+  releaseName: external-secrets
+  repo: https://charts.external-secrets.io
