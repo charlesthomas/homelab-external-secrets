@@ -1,6 +1,6 @@
 _commit: v1.1.2-13-gc067006
 _src_path: /Users/crthomas/code/charlesthomas/homelab-template
-additionalResources: network-policies.yaml
+additionalResources: cluster-secret-stores.yaml,network-policies.yaml
 backups: false
 helm: true
 helmCrds: true
