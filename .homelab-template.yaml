@@ -16,7 +16,6 @@ namespace: external-secrets
 pvc: false
 reloader: true
 resources:
-- configmaps.yaml
 - deployments.yaml
 - secrets.yaml
 - services.yaml
