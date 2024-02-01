@@ -28,7 +28,7 @@ patches:
     kind: Deployment
 helmCharts:
 - name: external-secrets
-  namespace: external-secrets
   includeCRDs: true
+  namespace: external-secrets
   releaseName: external-secrets
   repo: https://charts.external-secrets.io
