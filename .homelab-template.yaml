@@ -1,4 +1,4 @@
-_commit: v1.6.2
+_commit: v1.6.18-4-gf354859
 _src_path: /home/crthomas/code/charlesthomas/homelab-template
 additionalResources: cluster-secret-stores.yaml,network-policies.yaml
 backups: false
@@ -9,7 +9,6 @@ helmRelease: external-secrets
 helmRepo: https://charts.external-secrets.io
 helmValues: ''
 helmVersion: ''
-ingSecret: ''
 ingress: false
 labels: 'app: external-secrets'
 name: external-secrets
