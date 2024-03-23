@@ -26,6 +26,22 @@ patches:
         reloader.stakater.com/auto: "true"
   target:
     kind: Deployment
+- patch: |-
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: external-secrets
+      namespace: external-secrets
+      annotations:
+        gethomepage.dev/href: https://external-secrets.crt.house
+        gethomepage.dev/enabled: "true"
+        gethomepage.dev/description: 
+        gethomepage.dev/group: 
+        gethomepage.dev/icon: external-secrets
+        gethomepage.dev/name: external-secrets
+        gethomepage.dev/pod-selector: ""
+  target:
+    kind: Ingress
 helmCharts:
 - name: external-secrets
   includeCRDs: true
