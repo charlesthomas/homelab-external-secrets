@@ -26,6 +26,8 @@ spec:
           imagePullPolicy: IfNotPresent
           command:
             - /entrypoint.sh
+          args:
+            - '99999'
           env:
             - name: BW_HOST
               valueFrom:
