@@ -8,7 +8,7 @@ helmName: external-secrets
 helmRelease: external-secrets
 helmRepo: https://charts.external-secrets.io
 helmValues: ''
-helmVersion: ''
+helmVersion: 0.15.1
 homepageEnabled: false
 ingress: false
 labels: 'app: external-secrets'

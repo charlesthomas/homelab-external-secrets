@@ -32,3 +32,4 @@ helmCharts:
   namespace: external-secrets
   releaseName: external-secrets
   repo: https://charts.external-secrets.io
+  version: 0.14.4
