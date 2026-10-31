@@ -5,8 +5,10 @@ namespace: external-secrets
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-external-secrets
-commonLabels:
-  app: external-secrets
+labels:
+- includeSelectors: true
+  pairs:
+    app: external-secrets
 
 resources:
 - resources/cluster-secret-stores.yaml
