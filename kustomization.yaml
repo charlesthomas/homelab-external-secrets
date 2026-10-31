@@ -5,8 +5,10 @@ namespace: external-secrets
 
 commonAnnotations:
   repo: https://github.com/charlesthomas/homelab-external-secrets
-commonLabels:
-  app: external-secrets
+labels:
+- includeSelectors: true
+  pairs:
+    app: external-secrets
 
 resources:
 - resources/cluster-secret-stores.yaml
@@ -33,3 +35,11 @@ helmCharts:
   releaseName: external-secrets
   repo: https://charts.external-secrets.io
   version: 0.14.4
+configMapGenerator:
+- name: grafana-dashboard-external-secrets
+  files:
+  - grafana/external-secrets.json
+  options:
+    disableNameSuffixHash: true
+    labels:
+      grafana_dashboard: "1"
